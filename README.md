@@ -1,5 +1,7 @@
 # lightning_speeds_gifs
-Using three command line tools, making quick gifs of alpacas for your friends to enjoy
+Using three command line tools, making quick gifs of alpacas for your friends to enjoy. 
+
+Current state is bash-only. Will work on python app.
 
 Uses 
 1) youtube-dl: https://github.com/rg3/youtube-dl
