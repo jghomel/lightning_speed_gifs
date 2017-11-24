@@ -14,5 +14,6 @@ echo enter desired quality among following:
 youtube-dl -F $yt_link
 read quality
 
-final_link="$(youtube-dl -f $quality -g $yt_link)"
-ffmpeg -ss "$start_time" -i "$final_link" -to "$end_time" -c copy ~/Documents/automatic_gif_repo/extracted.mp4
+final_link="$(youtube-dl -f "$quality" -g "$yt_link")"
+file_name="$(youtube-dl --get-filename -o "%(title)s.%(ext)s" "$yt_link")"
+ffmpeg -ss "$start_time" -i "$final_link" -to "$end_time" -c copy ~/Documents/automatic_gif_repo/"$file_name"
